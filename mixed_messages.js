@@ -15,7 +15,7 @@ function randomIndex(num) {
     return Math.floor(Math.random() * num);
 };
 
-let createdMeal = ['Your meal today is: ',];
+let createdMeal = ['Your meal today is:',];
 
 function selectMealComponents() {
     for (const component in mealComponents) {
@@ -36,5 +36,12 @@ function selectMealComponents() {
         }
     };
 
+    let completedMeal = '';
+
+function joinMealComponents(arr) {
+    completedMeal = arr.join(' ')
+    console.log(completedMeal);
+}
+
 selectMealComponents();
-console.log(createdMeal);
+joinMealComponents(createdMeal);
